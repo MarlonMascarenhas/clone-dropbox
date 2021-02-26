@@ -41,7 +41,9 @@ export const Navigation = styled.nav`
         cursor: pointer;
     }
 
-    @media (max-width: 1024px) {
+    @media (min-width: 1024px) {
+        justify-content: flex-end;
+
         > h1 {
             display: none;
         }
