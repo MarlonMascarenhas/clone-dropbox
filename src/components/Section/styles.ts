@@ -48,6 +48,8 @@ export const HeaderWrapper = styled.div `
     left: 0;
     right: 0;
     bottom: 0;
+
+    clip: rect(auto, auto, auto, auto);
 `;
 export const Header = styled.header `
     z-index: 3;
@@ -69,10 +71,7 @@ export const Header = styled.header `
             font-size: 29px;
         }
 
-        &:hover, 
-        &:focus {
-            text-decoration: underline;
-        }
+        
     }
 
     > button {
@@ -82,6 +81,11 @@ export const Header = styled.header `
         outline: none;
         cursor: pointer;
         font-size: 16px;
+
+        &:hover, 
+        &:focus {
+            text-decoration: underline;
+        }
     }
 
     position: fixed;
