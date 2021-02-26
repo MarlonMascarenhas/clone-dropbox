@@ -8,24 +8,27 @@ interface Props {
 }
 
 const Section: React.FC<Props> = ({variant, title, description}) => {
-  return (
-    <Container className={variant}>
-        <HeaderWrapper>
-            <Header>
-                <h1>
-                    <DropboxLogo />
-                    <span>Dropbox</span>
-                </h1>
-                <button>Interagir</button>
-            </Header>
-        </HeaderWrapper>
 
-        <Content>
-            <h2>{title}</h2>
-            <p>{description}</p>
-        </Content>
+    const buttonVariant = Math.round(Math.random());
 
-    </Container>
+    return (
+        <Container className={variant}>
+            <HeaderWrapper>
+                <Header>
+                    <h1>
+                        <DropboxLogo />
+                        <span>Dropbox</span>
+                    </h1>
+                    <button>{buttonVariant === 0 ? 'Interagir' : 'Acessar' }</button>
+                </Header>
+            </HeaderWrapper>
+
+            <Content>
+                <h2>{title}</h2>
+                <p>{description}</p>
+            </Content>
+
+        </Container>
     );
 }
 
