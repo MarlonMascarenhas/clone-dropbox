@@ -36,6 +36,8 @@ export const Container = styled.div`
             --heading-font-size: 71px;
         }
     }
+
+    background: var(--bg-color);
 `;
 
 export const Content = styled.div`
